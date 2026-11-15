@@ -1,0 +1,15 @@
+{
+  "name": "mern-recipe-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack MERN recipe app: auth, recipe CRUD, search, ratings, favorites",
+  "scripts": {
+    "setup": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed": "npm run seed --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
